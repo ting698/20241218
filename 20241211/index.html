@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>選擇題測驗系統</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-pencil-alt"></i> 選擇題測驗系統</h1>
+        
+        <div id="quizSection" class="section">
+            <div class="quiz-header">
+                <i class="fas fa-book-open"></i> 請認真作答喔！
+            </div>
+            <div id="questionContainer">
+                <!-- 題目將由 JavaScript 自動載入 -->
+            </div>
+            <button onclick="submitQuiz()">
+                <i class="fas fa-paper-plane"></i> 提交答案
+            </button>
+        </div>
+
+        <div id="resultSection" class="section" style="display: none;">
+            <h2><i class="fas fa-star"></i> 測驗結果 <i class="fas fa-star"></i></h2>
+            <div class="result-content">
+                <i class="fas fa-trophy result-icon"></i>
+                <p>得分：<span id="score"></span></p>
+                <p id="feedback"></p>
+            </div>
+            <button onclick="resetQuiz()">
+                <i class="fas fa-redo"></i> 重新開始
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
